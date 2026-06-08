@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    double num1, num2, num3;
+
+    printf("Enter three numbers: ");
+
+    // Validate input: must be three numbers
+    if (scanf("%lf %lf %lf", &num1, &num2, &num3) != 3) {
+        printf("Invalid input. Please enter numeric values only.\n");
+        return 1; // Exit with error
+    }
+
+    double largest;
+
+    // Compare numbers to find the largest
+    if (num1 >= num2 && num1 >= num3) {
+        largest = num1;
+    } else if (num2 >= num1 && num2 >= num3) {
+        largest = num2;
+    } else {
+        largest = num3;
+    }
+
+    printf("The largest number is: %.2lf\n", largest);
+
+    return 0;
+}
+
+
